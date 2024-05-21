@@ -101,8 +101,8 @@
 </aside>
 
 <script>
-    $(".nav-link").on('click'),function(){
+    $(".nav-link").on('click',function(){
         $(".nav-link").removeClass("active");
         $(this).addClass("active");
-    }
+    })
 </script>
