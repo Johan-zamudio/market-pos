@@ -8,8 +8,22 @@ class AjaxDashboard{
         $datos = DashboardControlador::crtGetDatosDashBoard();
         echo json_encode($datos);
         }
+
+        public function getVentasMesActual(){
+            $ventasMesActual = DashboardControlador::crtGetVentasMesActual();
+            echo json_encode($ventasMesActual);
+        }
     }
 
 
+
+if(isset($_POST['accion']) && $_POST['accion'] == 1){
+
+    $ventasMesActual = new AjaxDashboard();
+    $ventasMesActual -> getVentasMesActual();
+}
+else
+{
 $datos = new AjaxDashboard();
 $datos -> getDatosDashboard();
+}

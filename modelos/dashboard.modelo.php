@@ -13,4 +13,17 @@ class DashboardModelo{
 
 
     }
+    static public function mdlGetVentasMesActual(){
+
+        $stmt = conexion::conectar()->prepare('call prc_ObtenerVentasMesActual()');
+
+        $stmt -> execute();
+
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+
+    }
+
+
+
 }

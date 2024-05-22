@@ -7,4 +7,13 @@ class DashboardControlador{
         $datos = DashboardModelo::mdlGetDatosDashboard();
         return $datos;
     }
+
+
+    static public function crtGetVentasMesActual(){
+
+        $ventasMesActual = DashboardModelo::mdlGetVentasMesActual();
+        return $ventasMesActual;
+    }
+
+
 }
